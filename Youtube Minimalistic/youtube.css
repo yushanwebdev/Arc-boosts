@@ -1,0 +1,84 @@
+#expanded.ytd-guide-collapsible-entry-renderer {
+  display: block;
+}
+
+#items .ytd-guide-section-renderer[is-primary] {
+  display: none !important;
+}
+
+#items ytd-guide-collapsible-section-entry-renderer {
+  border-top: none !important;
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+.subscribe-list {
+  padding-top: 20px !important;
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  max-width: 100%;
+  scroll-behavior: smooth;
+  /* Hide scrollbar for Chrome, Safari and Opera */
+
+  /* Hide scrollbar for IE, Edge, and Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.subscribe-list::-webkit-scrollbar {
+  display: none;
+}
+
+.subscribe-list a {
+  flex: 0 0 auto; /* Prevents the items from shrinking */
+  margin-right: 12px; /* Spacing between items */
+  /* Add more styling as needed */
+  position: relative;
+  z-index: 1;
+}
+
+.subscribe-list a img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #fff !important;
+}
+
+/* Adding a small red circle */
+.subscribe-list a[line-end-style="dot"]::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  right: 1px;
+  width: 10px; /* Size of the circle */
+  height: 10px; /* Size of the circle */
+  background-color: red; /* Color of the circle */
+  border-radius: 50%; /* Makes it round */
+}
+
+ytd-two-column-browse-results-renderer[page-subtype="home"] #header {
+  padding-top: 75px !important;
+}
+
+ytd-two-column-browse-results-renderer[page-subtype="home"]
+  .subscribe-list
+  ~ #header {
+  padding-top: 0 !important;
+}
+
+body
+  #guide-inner-content
+  #guide-renderer
+  #sections.ytd-guide-renderer
+  ytd-guide-section-renderer:nth-child(2) {
+  display: none !important;
+}
+
+body
+  #guide-inner-content
+  #guide-renderer
+  #sections.ytd-guide-renderer
+  ytd-guide-section-renderer:nth-child(2).show {
+  display: block !important;
+}
